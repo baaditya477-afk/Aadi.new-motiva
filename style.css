@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b0b0d;
+    color: #f5f5f5;
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVBAR */
+
+.navbar {
+    height: 80px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(11,11,13,0.85);
+    backdrop-filter: blur(18px);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.logo span,
+.footer-logo span {
+    color: #b8ff3d;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #999;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+.nav-button {
+    padding: 11px 20px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 30px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: #b8ff3d;
+    color: #0b0b0d;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 720px;
+    padding: 110px 7%;
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 80px;
+    align-items: center;
+    background:
+        radial-gradient(circle at 20% 40%, rgba(184,255,61,0.08), transparent 35%),
+        #0b0b0d;
+}
+
+.badge,
+.small-title {
+    color: #b8ff3d;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(55px, 7vw, 100px);
+    line-height: 1.02;
+    margin: 25px 0;
+    max-width: 850px;
+}
+
+.hero h1 span {
+    color: #777;
+    display: block;
+}
+
+.hero-content > p {
+    max-width: 550px;
+    color: #999;
+    font-size: 17px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.primary-button {
+    display: inline-block;
+    background: #b8ff3d;
+    color: #0b0b0d;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.primary-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(184,255,61,0.2);
+}
+
+.secondary-button {
+    padding: 14px 24px;
+    border: 1px solid #333;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.hero-quote {
+    padding: 50px;
+    border: 1px solid #29292d;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.025);
+}
+
+.quote-mark {
+    color: #b8ff3d;
+    font-family: Georgia, serif;
+    font-size: 80px;
+    height: 70px;
+}
+
+.hero-quote p {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    line-height: 1.35;
+}
+
+.quote-author {
+    margin-top: 25px;
+    color: #777;
+    font-size: 13px;
+}
+
+/* SECTIONS */
+
+.section,
+.quotes-section {
+    padding: 120px 7%;
+}
+
+.section {
+    background: #101013;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 60px;
+}
+
+.section-heading h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 55px;
+    line-height: 1;
+    margin-top: 15px;
+}
+
+.section-heading > p {
+    max-width: 350px;
+    color: #777;
+}
+
+/* MOTIVATIONS */
+
+.motivation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.motivation-card {
+    padding: 30px;
+    min-height: 190px;
+    border: 1px solid #29292d;
+    border-radius: 18px;
+    background: #151518;
+    transition: 0.35s;
+}
+
+.motivation-card:hover {
+    transform: translateY(-6px);
+    border-color: #b8ff3d;
+}
+
+.motivation-card span,
+.quote-card span {
+    color: #555;
+    font-size: 12px;
+}
+
+.motivation-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    margin: 25px 0 8px;
+}
+
+.motivation-card p {
+    color: #777;
+    font-size: 14px;
+}
+
+.featured {
+    background: #b8ff3d !important;
+    color: #0b0b0d;
+}
+
+.featured span,
+.featured p {
+    color: #3d5224;
+}
+
+/* QUOTES */
+
+.quotes-section {
+    background: #0b0b0d;
+}
+
+.quotes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.quote-card {
+    min-height: 250px;
+    padding: 30px;
+    border: 1px solid #29292d;
+    border-radius: 18px;
+    transition: 0.35s;
+}
+
+.quote-card:hover {
+    background: #151518;
+    transform: translateY(-5px);
+}
+
+.quote-card p {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    line-height: 1.4;
+    margin-top: 40px;
+}
+
+.quote-card small {
+    display: block;
+    margin-top: 20px;
+    color: #777;
+}
+
+/* DASHBOARD */
+
+.dashboard-preview {
+    margin: 40px 7% 120px;
+    padding: 100px;
+    border-radius: 30px;
+    background:
+        radial-gradient(circle at 80% 30%, rgba(184,255,61,0.15), transparent 35%),
+        #151518;
+    border: 1px solid #29292d;
+}
+
+.dashboard-preview h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 65px;
+    line-height: 1.05;
+    margin: 20px 0;
+}
+
+.dashboard-preview h2 span {
+    color: #777;
+}
+
+.dashboard-preview p {
+    max-width: 500px;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 50px 7%;
+    border-top: 1px solid #222;
+    text-align: center;
+}
+
+.footer-logo {
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+footer p {
+    color: #666;
+    font-size: 13px;
+}
+
+.copyright {
+    margin-top: 20px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 80px;
+    }
+
+    .motivation-grid,
+    .quotes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    .section-heading > p {
+        margin-top: 20px;
+    }
+
+    .dashboard-preview {
+        padding: 60px 30px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero {
+        padding: 70px 5%;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero-quote {
+        padding: 30px;
+    }
+
+    .section,
+    .quotes-section {
+        padding: 80px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 42px;
+    }
+
+    .motivation-grid,
+    .quotes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-preview {
+        margin: 20px 5% 80px;
+    }
+
+    .dashboard-preview h2 {
+        font-size: 45px;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

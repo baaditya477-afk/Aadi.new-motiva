@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Motiva{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <a href="/" class="logo">
+            MOTIVA<span>.</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="#motivations">Motivations</a>
+            <a href="#quotes">Quotes</a>
+            <a href="#dashboard">Dashboard</a>
+        </div>
+
+        <a href="#dashboard" class="nav-button">
+            My Space
+        </a>
+
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+        <div class="footer-logo">MOTIVA<span>.</span></div>
+        <p>Find your reason. Keep moving.</p>
+        <p class="copyright">© 2026 Motiva</p>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
